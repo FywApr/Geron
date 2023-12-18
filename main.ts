@@ -6,17 +6,6 @@ import * as testObject from "./src/scripts/geron"; // импорт всего в
 // console.log(testFunction())
 // console.log(testObject.test1)
 
-const office = {
-  tech: {
-    employersCount: 10,
-    jobsCount: 5,
-  },
-  design: {
-    employersCount: 10,
-    jobsCount: 5,
-  },
-};
-
 // Object.entries(office).forEach(([keys, values]) => {
 //     console.log(keys, values)
 // })
