@@ -544,52 +544,52 @@ newStuffs.sort((a, b) => {
 
 // Задача трелло 07
 
-type TPerson = {
-  name: string;
-  isUvolnenie: boolean;
-  salary: number;
-  overdue: number;
-  departament: TDepartament;
-};
+// type TPerson = {
+//   name: string;
+//   isUvolnenie: boolean;
+//   salary: number;
+//   overdue: number;
+//   departament: TDepartament;
+// };
 
-type TDepartament = "TECH" | "DESIGN" | "PROJECTS";
-let personal: TPerson[] = [
-  {
-    name: "Rina",
-    isUvolnenie: false,
-    salary: 120000,
-    overdue: 5,
-    departament: "TECH",
-  },
-  {
-    name: "Kathryn",
-    isUvolnenie: false,
-    salary: 160000,
-    overdue: 0,
-    departament: "DESIGN",
-  },
-  {
-    name: "Danil",
-    isUvolnenie: false,
-    salary: 200000,
-    overdue: 0,
-    departament: "TECH",
-  },
-  {
-    name: "Ilya",
-    isUvolnenie: false,
-    salary: 350000,
-    overdue: 11,
-    departament: "PROJECTS",
-  },
-];
+// type TDepartament = "TECH" | "DESIGN" | "PROJECTS";
+// let personal: TPerson[] = [
+//   {
+//     name: "Rina",
+//     isUvolnenie: false,
+//     salary: 120000,
+//     overdue: 5,
+//     departament: "TECH",
+//   },
+//   {
+//     name: "Kathryn",
+//     isUvolnenie: false,
+//     salary: 160000,
+//     overdue: 0,
+//     departament: "DESIGN",
+//   },
+//   {
+//     name: "Danil",
+//     isUvolnenie: false,
+//     salary: 200000,
+//     overdue: 0,
+//     departament: "TECH",
+//   },
+//   {
+//     name: "Ilya",
+//     isUvolnenie: false,
+//     salary: 350000,
+//     overdue: 11,
+//     departament: "PROJECTS",
+//   },
+// ];
 
-let personalGood = personal.filter((person) => person.overdue === 0);
-personalGood.map((person) => (person.salary *= 1.2));
-// console.log(personalGood);
+// let personalGood = personal.filter((person) => person.overdue === 0);
+// personalGood.map((person) => (person.salary *= 1.2));
+// // console.log(personalGood);
 
-let personalBad = personal.filter((person) => person.overdue > 4);
-personalBad.map((person) => (person.isUvolnenie = true));
+// let personalBad = personal.filter((person) => person.overdue > 4);
+// personalBad.map((person) => (person.isUvolnenie = true));
 // console.log(personalBad)
 // 07 задача вторая
 
@@ -627,61 +627,61 @@ personalBad.map((person) => (person.isUvolnenie = true));
 // let newPersonal = [...personalUnder20, ...personalUnder30, ...personalUnder50];
 // console.log(newPersonal);
 
-const testFunction = () => {
-  return "Test";
-};
+// const testFunction = () => {
+//   return "Test";
+// };
 
-export default testFunction;
+// export default testFunction;
 
-export const test: string = "test";
+// export const test: string = "test";
 
-export const test1: string = "test1";
+// export const test1: string = "test1";
 
-// 1 подзадача
-import { seasons } from "./data";
+// // 1 подзадача
+// import { seasons } from "./data";
 
-let firstValue = seasons.winter.income;
-let secondValue = seasons.winter.income;
-let firstHired = seasons.winter.hired;
-let firstHiredResult;
-let firstDismissed = seasons.winter.dismissed;
-let firstDismissedResult;
-let firstResult = {};
-let secondResult = {};
+// let firstValue = seasons.winter.income;
+// let secondValue = seasons.winter.income;
+// let firstHired = seasons.winter.hired;
+// let firstHiredResult;
+// let firstDismissed = seasons.winter.dismissed;
+// let firstDismissedResult;
+// let firstResult = {};
+// let secondResult = {};
 
-Object.entries(seasons).forEach(([keys, values]) => {
-  if (values.income > firstValue) {
-    firstValue = values.income;
-    firstResult = values;
-  }
+// Object.entries(seasons).forEach(([keys, values]) => {
+//   if (values.income > firstValue) {
+//     firstValue = values.income;
+//     firstResult = values;
+//   }
 
-  if (values.income < secondValue) {
-    secondValue = values.income;
-    secondResult = values;
-  }
+//   if (values.income < secondValue) {
+//     secondValue = values.income;
+//     secondResult = values;
+//   }
 
-  if (firstHired < values.hired) {
-    firstHired = values.hired;
-    firstHiredResult = keys;
-  }
+//   if (firstHired < values.hired) {
+//     firstHired = values.hired;
+//     firstHiredResult = keys;
+//   }
 
-  if (firstHired < values.hired) {
-    firstHired = values.hired;
-    firstHiredResult = keys;
-  }
-  if (firstDismissed < values.dismissed) {
-    firstDismissed = values.dismissed;
-    firstDismissedResult = keys;
-  }
-});
+//   if (firstHired < values.hired) {
+//     firstHired = values.hired;
+//     firstHiredResult = keys;
+//   }
+//   if (firstDismissed < values.dismissed) {
+//     firstDismissed = values.dismissed;
+//     firstDismissedResult = keys;
+//   }
+// });
 
-console.log("Максимальное значение из всех сезонов: ", firstResult);
-console.log("Минимальное значение из всех сезонов: ", secondResult);
-console.log("В этом сезоне пришли больше всего: ", firstHiredResult);
-console.log("В этом сезоне ушли больше всего: ", firstDismissedResult);
+// console.log("Максимальное значение из всех сезонов: ", firstResult);
+// console.log("Минимальное значение из всех сезонов: ", secondResult);
+// console.log("В этом сезоне пришли больше всего: ", firstHiredResult);
+// console.log("В этом сезоне ушли больше всего: ", firstDismissedResult);
 
-enum EDepartaments {
-  TECH = "технический",
-  DESIGN = "дизайн",
-  PROJECT = "проектировщики",
-}
+// enum EDepartaments {
+//   TECH = "технический",
+//   DESIGN = "дизайн",
+//   PROJECT = "проектировщики",
+// }

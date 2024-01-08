@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./src/scripts/geron.ts",
+  entry: "./src/scripts/async.ts",
   module: {
     rules: [
       {
