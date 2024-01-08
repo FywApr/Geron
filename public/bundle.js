@@ -1,1 +1,1 @@
-(()=>{"use strict";(async()=>{const t=await fetch("https://jsonplaceholder.typicode.com/posts/1/comments"),o=await t.json();let e=o[0];return await o.forEach((t=>{e.body.length<t.body.length&&(e=t)})),e})().then((t=>{console.log(t)}))})();
+(()=>{"use strict";let t;(async()=>{const t=await fetch("https://run.mocky.io/v3/b1bd6eba-759d-4e61-9d45-0816794d2d0b");return await t.json()})().then((e=>{t=e,console.log(t)}))})();

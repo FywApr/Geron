@@ -100,29 +100,29 @@ import * as testObject from "./src/scripts/geron"; // импорт всего в
 
 // Задача
 
-type TUsers = {
-  postId: number;
-  id: number;
-  name: string;
-  email: string;
-  body: string;
-};
+// type TUsers = {
+//   postId: number;
+//   id: number;
+//   name: string;
+//   email: string;
+//   body: string;
+// };
 
-const getUsers = async () => {
-  const response = await fetch(
-    "https://jsonplaceholder.typicode.com/posts/1/comments"
-  );
-  const data: TUsers[] = await response.json();
+// const getUsers = async () => {
+//   const response = await fetch(
+//     "https://jsonplaceholder.typicode.com/posts/1/comments"
+//   );
+//   const data: TUsers[] = await response.json();
 
-  let firstValue: TUsers = data[0];
-  await data.forEach((values) => {
-    if (firstValue.body.length < values.body.length) {
-      firstValue = values;
-    }
-  });
-  return firstValue;
-};
+//   let firstValue: TUsers = data[0];
+//   await data.forEach((values) => {
+//     if (firstValue.body.length < values.body.length) {
+//       firstValue = values;
+//     }
+//   });
+//   return firstValue;
+// };
 
-getUsers().then((data) =>{
-  console.log(data)
-})
+// getUsers().then((data) =>{
+//   console.log(data)
+// })
