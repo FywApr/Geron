@@ -27,11 +27,11 @@ export class Storage {
     });
   }
 
-  getStorage(id: number): TStorage {
+  protected getStorage(id: number): TStorage {
     return this._data.find((item) => item.id === id);
   }
 
-  setProducts(id: number, product: TProduct) {
+  protected setProducts(id: number, product: TProduct) {
     const storage = this.getStorage(id);
     storage.products.push(product);
     this.setUpdateStorage(storage);
