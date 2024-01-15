@@ -126,3 +126,9 @@ import * as testObject from "./src/scripts/geron"; // импорт всего в
 // getUsers().then((data) =>{
 //   console.log(data)
 // })
+
+import { Products } from './src/models/Products'; 
+
+const productsStore = new Products();
+
+console.log(productsStore.getAllStorages())
