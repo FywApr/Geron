@@ -1,39 +1,28 @@
-type InitParams = {
-  user: string;
-  address: string;
-  sum: number;
-};
+import { Client, Delivery, Basket, TOrder } from "./order-types";
 
-export default class Order {
-  private _user: string;
-  private _address: string;
-  private _sum: number;
-  private _createDate: Date;
-  private _deliveryDate: Date;
-
-  constructor(params: InitParams) {
-    this._user = params.user;
-    this._address = params.address;
-    this._sum = params.sum;
-    this._createDate = new Date();
-    this._deliveryDate = this.generateDeliveryDate();
-  }
-
-  // назначение +7 дней к текущей
-  private generateDeliveryDate() {
-    const deliveryDate = new Date(this._createDate);
-    deliveryDate.setDate(deliveryDate.getDate() + 7); // getDate получается день
-    return deliveryDate;
+export class Order {
+  client: Client;
+  delivery: Delivery;
+  basket: Basket;
+  constructor(order: TOrder) {
+    this.client = order.client;
+    this.delivery = order.delivery;
+    this.basket = order.basket;
   }
 
   getInfoOrder() {
-    const date = `${this._deliveryDate.getDate()}.${
-      this._deliveryDate.getMonth() + 1
-    }.${this._deliveryDate.getFullYear()}`;
-    return `${this._user}, спасибо за оформление заказа на сумму ${this._sum},\nожидайте доставку ${date} по адресу ${this._address}`;
+    return `Клиент: ${this.client.firstName}. Ваши заказы:${this.getProductsText()}. \nДоставка придет: ${this.generateDeliveryDate().toDateString()} `;
   }
-
-  setNewAddress(address: string) {
-    this._address = address;
+  private getProductsText() {
+    let newProducts = []
+    this.basket.products.forEach(product => {
+        newProducts.push(" " + product.name)
+    })
+    return newProducts
+  }
+  private generateDeliveryDate() {
+    const deliveryDate = new Date(this.delivery.dateTime);
+    deliveryDate.setDate(deliveryDate.getDate() + 7); // getDate получается день
+    return deliveryDate;
   }
 }
