@@ -35,5 +35,27 @@ for (let j = 0; j < 3; j++) {
 
   const infoOrder = new Order(order);
 
-  console.log(infoOrder.getInfoOrder());
+  // console.log(infoOrder.getInfoOrder());
+}
+
+import { TNewOrder } from './src/models/reservation-types';
+import autos from "./src/data/auto-show.json";
+import users from "./src/data/users.json";
+import { NewOrder } from "./src/models/NewOrder"
+
+const newOrder: TNewOrder = {
+  name: users[1].name,
+  reservation: {
+    autoShow: autos[1].address,
+    mark: autos[1].name,
+    model: autos[1].cars[1].model
+  },
+  price: autos[1].cars[1].price
+}
+
+if (users[1].age < 20) {
+  console.log("Вам отказано");
+} else {
+  const newInfoOrder = new NewOrder(newOrder)
+  console.log(newInfoOrder.getInfo())
 }

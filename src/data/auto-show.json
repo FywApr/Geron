@@ -1,0 +1,138 @@
+[
+  {
+    "name": "Audi",
+    "city": "Москва",
+    "address": "ул. Примерная, 123",
+    "hours": "Пн-Вс: 09:00-18:00",
+    "cars": [
+      {
+        "model": "Audi RS8",
+        "color": "красная",
+        "year": 2012,
+        "price": 40000
+      },
+      {
+        "model": "Audi Q5",
+        "color": "серебристый",
+        "year": 2023,
+        "price": 80000
+      },
+      {
+        "model": "Audi A7",
+        "color": "черный",
+        "year": 2022,
+        "price": 90000
+      },
+      {
+        "model": "Audi A3",
+        "color": "черный",
+        "year": 2020,
+        "price": 75000
+      }
+    ]
+  },
+  {
+    "name": "BMW",
+    "city": "Санкт-Петербург",
+    "address": "пр. Образцовый, 456",
+    "hours": "Пн-Сб: 10:00-20:00, Вс: выходной",
+    "cars": [
+      {
+        "model": "BMW 3 Series",
+        "color": "черный",
+        "year": 2022,
+        "price": 90000
+      },
+      {
+        "model": "BMW X5",
+        "color": "синий",
+        "year": 2007,
+        "price": 30000
+      },
+      {
+        "model": "BMW 7 Series",
+        "color": "черный",
+        "year": 2022,
+        "price": 100000
+      }
+    ]
+  },
+  {
+    "name": "Mercedes",
+    "city": "Екатеринбург",
+    "address": "проезд Успешный, 789",
+    "hours": "Ежедневно: 08:00-19:00",
+    "cars": [
+      {
+        "model": "Mercedes Benz C-Class",
+        "color": "серый",
+        "year": 2022,
+        "price": 90000
+      },
+      {
+        "model": "Mercedes Benz GLC",
+        "color": "зеленый",
+        "year": 2023,
+        "price": 120000
+      },
+      {
+        "model": "Mercedes Benz S-Class",
+        "color": "серый",
+        "year": 2024,
+        "price": 140000
+      }
+    ]
+  },
+  {
+    "name": "Toyota",
+    "city": "Новосибирск",
+    "address": "ул. Перспективная, 234",
+    "hours": "Пн-Пт: 09:30-17:30, Сб-Вс: 10:00-16:00",
+    "cars": [
+      {
+        "model": "Toyota Camry 75",
+        "color": "белый",
+        "year": 2023,
+        "price": 70000
+      },
+      {
+        "model": "Toyota RAV 4",
+        "color": "черный",
+        "year": 2014,
+        "price": 40000
+      },
+      {
+        "model": "Toyota Prius",
+        "color": "серый",
+        "year": 2017,
+        "price": 120000
+      }
+    ]
+  },
+  {
+    "name": "Lexus",
+    "city": "Красноярск",
+    "address": "бульвар Перспективный, 567",
+    "hours": "Ежедневно: 07:00-22:00",
+    "cars": [
+      {
+        "model": "Lexus RS4",
+        "color": "красный",
+        "year": 2019,
+        "price": 60000
+      },
+      {
+        "model": "Lexus RX",
+        "color": "темно-синий",
+        "year": 2018,
+        "price": 70000
+      },
+      {
+        "model": "Lexus LS",
+        "color": "черный",
+        "year": 2021,
+        "price": 90000
+      }
+    ]
+  }
+]

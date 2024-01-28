@@ -4,6 +4,7 @@ export class Order {
   client: Client;
   delivery: Delivery;
   basket: Basket;
+  
   constructor(order: TOrder) {
     this.client = order.client;
     this.delivery = order.delivery;
@@ -11,7 +12,7 @@ export class Order {
   }
 
   getInfoOrder() {
-    return `Клиент: ${this.client.firstName}. Ваши заказы:${this.getProductsText()}. \nДоставка придет: ${this.generateDeliveryDate().toDateString()} `;
+    return `Клиент: ${this.client.firstName}. Ваши заказы: ${this.getProductsText()}. \nДоставка придет: ${this.generateDeliveryDate().toDateString()} `;
   }
   private getProductsText() {
     let newProducts = []
